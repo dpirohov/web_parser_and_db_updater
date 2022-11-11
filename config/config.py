@@ -3,7 +3,7 @@ from woocommerce import API
 from dotenv import load_dotenv
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-key_path = os.path.join(BASE_DIR, "data.env")
+key_path = os.path.join(BASE_DIR, ".env")
 
 load_dotenv(key_path)
 
