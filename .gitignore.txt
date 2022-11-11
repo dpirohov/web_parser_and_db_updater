@@ -1,2 +1,0 @@
-.env
-update_articles
