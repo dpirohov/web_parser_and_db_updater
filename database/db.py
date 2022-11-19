@@ -16,7 +16,7 @@ class DataBase:
     async def get_products(self):
         async with self.pool.acquire() as connection:
             async with connection.cursor() as cursor:
-                query = f"SELECT * FROM gg_wc_product_meta_lookup WHERE tax_class=''"
+                query = f"SELECT * FROM gg_wc_product_meta_lookup WHERE tax_class='' AND sku != ''"
                 logger.debug(f"Starting database query: {query}")
                 await cursor.execute(query)
                 result = await cursor.fetchall()
